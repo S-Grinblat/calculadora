@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
 </head>
 <body>
     <div class="container">
-        <div id="Operation">0</div>
-        <div id="Result">0</div>
+        <div id="operation">0</div>
+        <div id="result">0</div>
 
         <div class="row">
-            <button class="button-start" onclick="Limpiar()">AC</button>
-            <button class="button-right" onclick="operator('%')">%</button>
+            <button class="button-start" onclick="limpiar()">AC</button>
+            <button class="button-right" onclick="operator('.')">.</button>
             <button class="button-right" onclick="operator('/')">/</button>
         </div>
 
@@ -22,7 +22,7 @@
             <button class="button" onclick="operator('7')">7</button>
             <button class="button" onclick="operator('8')">8</button>
             <button class="button" onclick="operator('9')">9</button>
-            <button class="button-right" onclick="operator('*')">x</button>
+            <button class="button-right" onclick="operator('*')">X</button>
         </div>
 
         <div class="row">
@@ -45,7 +45,6 @@
             <button class="button-right" onclick="erase()">←</button>
         </div>
     </div>
-
 
     <script src="calc.js"></script>
 </body>

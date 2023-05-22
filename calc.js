@@ -1,12 +1,6 @@
-//!operRealizada = operation
-//!txtResult = result
-//!operadorSeleccionado = selected_operator
-//!numero = number
-//!ultimoDigitoApretado = last_digit
-
 let parcial = "";
-let operation = document.getElementById('Operation');
-let result = document.getElementById('Result');
+let Operation = document.getElementById('operation');
+let Result = document.getElementById('result');
 let selected_operator = "";
 let number = "";
 let last_digit = "";
@@ -14,11 +8,11 @@ let last_digit = "";
 function operator(num){
     number = number + num;
     parcial = parcial + num;
-    operation.innerHTML = parcial;
+    Operation.innerHTML = parcial;
 
     if(number == '0' && selected_operator == '/'){
         Limpiar();
-        result.innerHTML = 'Undefined';
+        Result.innerHTML = 'Undefined';
         return;
     }
     if(last_digit == 'operacion') {
@@ -31,24 +25,24 @@ function operacion(oper) {
     last_digit = 'operacion';
     parcial = parcial + oper;
     number = " ";
-    operation.innerHTML = parcial;
+    Operation.innerHTML = parcial;
 }
 
 function calculation(){
     parcial = eval(parcial);
-    result.innerHTML = parcial;
+    Result.innerHTML = parcial;
     parcial = parcial.toString();
     number = " ";
-    operation.innerHTML = parcial;
+    Operation.innerHTML = parcial;
 }
 
-function Limpiar() {
+function limpiar() {
     selected_operator = "0";
     parcial = "";
-    result.innerHTML = "";
+    Result.innerHTML = "";
     number = "";
     last_digit = "";
-    operation.innerHTML = '0'; 
+    Operation.innerHTML = '0'; 
 }
 
 function erase() {
